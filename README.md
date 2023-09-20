@@ -11,3 +11,9 @@
 - Change Enemy Highlight Color to Purple in Valorant
 - Change Display Mode to Windowed Fullscreen (The colorbot tends to not work sometimes with fullscreen)
 - Happy cheating :)
+
+# Showcase:
+
+
+https://github.com/kaanosu/ValorantArduinoColorbot/assets/103574624/b9afc0d7-da94-4318-8a52-9da90633c7a7
+
