@@ -12,7 +12,7 @@
 - Change Display Mode to Windowed Fullscreen (The colorbot tends to not work sometimes with fullscreen)
 - Happy cheating :)
 
-# Showcase:
+# Showcase (Tampered settings):
 
 
 https://github.com/kaanosu/ValorantArduinoColorbot/assets/103574624/b9afc0d7-da94-4318-8a52-9da90633c7a7
