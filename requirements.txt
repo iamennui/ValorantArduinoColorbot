@@ -3,3 +3,4 @@ opencv-python
 serial-tool 
 pyautogui
 termcolor
+mss
