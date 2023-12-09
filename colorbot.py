@@ -17,7 +17,6 @@ class Colorbot:
         self.configure()
 
     def configure(self):
-        self.SENSITIVITY = self.settings.get_float('Settings', 'valorantSensitivity')
         self.xspeed = lambda: self.settings.get_float('AIMBOT', 'xSpeed')
         self.yspeed = lambda: self.settings.get_float('AIMBOT', 'ySpeed')
         self.AIMBOT_KEY = int(self.settings.get('AIMBOT', 'toggleKey'), 16)
