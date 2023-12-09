@@ -5,12 +5,15 @@
 # Setup:
 - Spoof arduino as stated above
 - Install requirements
-- Configure settings.ini (don't change valorantSensitivity value: optional, but recommended)
+- Configure settings.ini
 - Run main.py
-- Change your Ingame Sensitivity to 0.4 (optional, but recommended)
+- Change your Ingame Sensitivity to 0.5
 - Change Enemy Highlight Color to Purple in Valorant
-- Change Display Mode to Windowed Fullscreen (The colorbot tends to not work sometimes with fullscreen)
 - Happy cheating :)
+
+# FAQ:
+- Colorbot doesn't work in fullscreen what do I do?: Enable Raw Input Buffer in Valorant.
+- Colorbot doesn't work in windowed/windowed fullscreen what do I do?: Disable Raw Input Buffer in Valorant.
 
 # Showcase (Tampered settings):
 
