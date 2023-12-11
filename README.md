@@ -5,11 +5,17 @@
 
 # Setup:
 1: Spoof arduino as stated above
+
 2: Install requirements
+
 3: Configure settings.ini
+
 4: Run main.py
+
 5: Change your Ingame Sensitivity to 0.5
+
 6: Change Enemy Highlight Color to Purple in Valorant
+
 7: Happy cheating :)
 
 # FAQ:
