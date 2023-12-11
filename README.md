@@ -4,23 +4,18 @@
 - Cheat is currently undetected, but there is a very rare chance you might get manual banned
 
 # Setup:
-1: Spoof arduino as stated above
-
-2: Install requirements
-
-3: Configure settings.ini
-
-4: Run main.py
-
-5: Change your Ingame Sensitivity to 0.5
-
-6: Change Enemy Highlight Color to Purple in Valorant
-
-7: Happy cheating :)
+- Spoof arduino as stated above
+- Install requirements
+- Configure settings.ini
+- Run main.py
+- Change your Ingame Sensitivity to 0.5
+- Change Enemy Highlight Color to Purple in Valorant
+- Happy cheating :)
 
 # FAQ:
 - Colorbot doesn't work in fullscreen what do I do?
   Enable Raw Input Buffer in Valorant
+  
 - Colorbot doesn't work in windowed/windowed fullscreen what do I do? 
   Disable Raw Input Buffer in Valorant
 
