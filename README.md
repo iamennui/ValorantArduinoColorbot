@@ -1,7 +1,7 @@
 # DISCLAIMER:
-- Only ATmega32U4 compatible.
-- You need to spoof your arduino using [this](https://cdn.discordapp.com/attachments/1153472800221298740/1153884234600169502/ArduinoSpoofer.exe) for it to work.
-- Cheat is currently undetected, but there is a very rare chance you might get manual banned.
+- Only ATmega32U4 compatible
+- You need to spoof your arduino using [this](https://cdn.discordapp.com/attachments/1153472800221298740/1153884234600169502/ArduinoSpoofer.exe) for it to work
+- Cheat is currently undetected, but there is a very rare chance you might get manual banned
 
 # Setup:
 - Spoof arduino as stated above
