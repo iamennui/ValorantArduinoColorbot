@@ -1,26 +1,37 @@
-# DISCLAIMER:
-- Only ATmega32U4 compatible
-- You need to spoof your arduino using [this](https://cdn.discordapp.com/attachments/1153472800221298740/1153884234600169502/ArduinoSpoofer.exe) for it to work
-- Cheat is currently undetected, but there is a very rare chance you might get manual banned
+[![Discord](https://discordapp.com/api/guilds/1235469363050577950/widget.png?style=shield)](https://discord.gg/9nCdHvNDkc)
 
-# Setup:
-- Spoof arduino as stated above
-- Install requirements
-- Configure settings.ini
-- Run main.py
-- Change your Ingame Sensitivity to 0.5
-- Change Enemy Highlight Color to Purple in Valorant
-- Happy cheating :)
+## DISCLAIMER
 
-# FAQ:
-- Colorbot doesn't work in fullscreen what do I do?
-  Enable Raw Input Buffer in Valorant
-  
-- Colorbot doesn't work in windowed/windowed fullscreen what do I do? 
-  Disable Raw Input Buffer in Valorant
+- **Compatibility**: This software is designed for Arduino Leonardo boards only.
+- **Cheat Detection**: I can not guarantee that this software is undetectable.
+- **Responsibility**: This software is intended for educational purposes only. I am not responsible for any account bans, penalties, or any other consequences that may result from using this tool. Use it at your own risk and be aware of the potential implications.
 
-# Showcase (Tampered settings):
+## Setup Instructions
 
+1. **Install Requirements**:
+   - Install all necessary dependencies by running:
+     ```bash
+     pip install -r requirements.txt
+     ```
+     
+2. **Spoof Arduino**:
+   - Spoof your Arduino Leonardo board to your mouse's VID and PID by running:
+     ```bash
+     py spoofer.py
+     ```
 
-https://github.com/kaanosu/ValorantArduinoColorbot/assets/103574624/b9afc0d7-da94-4318-8a52-9da90633c7a7
+3. **Configure `settings.ini`**:
+   - Adjust the settings in `settings.ini` according to your preferences, if you want to change keybinds you can find the values [here](https://learn.microsoft.com/windows/win32/inputdev/virtual-key-codes).
 
+4. **Run the Colorbot**:
+   - Execute the main script by running:
+     ```bash
+     py main.py
+     ```
+
+5. **In-Game Settings**:
+   - Set your in-game sensitivity to **0.5**.
+   - Change the enemy highlight color to **Purple**.
+
+6. **Enjoy**:
+   - Have fun, but remember to play responsibly!
