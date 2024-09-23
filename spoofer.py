@@ -123,13 +123,28 @@ class Spoofer:
 
         os.system('cls')
 
-        # Display the detected mouse devices	
-        for index, (device_name, vid, pid) in enumerate(detected_mice, 1):
-            print(f"{index} → {device_name}\tVID: {vid or 'Not found'}, PID: {pid or 'Not found'}")
+        # Filter and store valid USB input devices
+        valid_mice = {}
+        for device_name, vid, pid in detected_mice:
+            if "USB Input Device" in device_name and vid and pid:
+                device_key = (vid, pid)
+                if device_key not in valid_mice:  # Avoid duplicates
+                    valid_mice[device_key] = device_name
 
-        # Prompt the user to select a mouse device
+        # If no valid mouse devices are found, exit
+        if not valid_mice:
+            print("No valid USB Input Device found.\nExiting in 10 seconds...")
+            time.sleep(10)
+            exit()
+
+        # Display the detected USB input devices
+        for index, ((vid, pid), device_name) in enumerate(valid_mice.items(), 1):
+            print(f"{index} → {device_name}\tVID: {vid}, PID: {pid}")
+
+        # Prompt the user to select a mouse device 
         selected_mouse_index = int(input("\nSelect your mouse number: ")) - 1
-        _, selected_vid, selected_pid = detected_mice[selected_mouse_index]
+        selected_device_key = list(valid_mice.keys())[selected_mouse_index]
+        selected_vid, selected_pid = selected_device_key
         # Update the Arduino Leonardo board settings
         self.update_boards("0x" + selected_vid, "0x" + selected_pid)
 

@@ -1,4 +1,5 @@
 import time
+import threading
 import serial
 import serial.tools.list_ports
 from settings import Settings
@@ -11,17 +12,23 @@ class Mouse:
     Attributes:
         settings (Settings): An instance of the Settings class to retrieve configuration settings.
         serial_port (serial.Serial): The serial port connection to the Arduino.
+        remainder_x (float): The accumulated remainder of x-axis movement.
+        remainder_y (float): The accumulated remainder of y-axis movement.
     """
     
     def __init__(self):
         """
-        Initializes the Mouse class by setting up the serial port connection to the Arduino.
+        Initializes the Mouse class by setting up the serial port connection to the Arduino
+        and initializing the remainder attributes.
         """
         self.settings = Settings()
+        self.lock = threading.Lock()
         self.serial_port = serial.Serial()
         self.serial_port.baudrate = 115200
         self.serial_port.timeout = 0
         self.serial_port.port = self.find_serial_port()
+        self.remainder_x = 0.0
+        self.remainder_y = 0.0
         try:
             self.serial_port.open()
         except serial.SerialException:
@@ -50,16 +57,29 @@ class Mouse:
 
     def move(self, x, y):
         """
-        Sends a mouse movement command to the Arduino.
+        Sends a mouse movement command to the Arduino, handling fractional movements by storing remainders.
 
         Args:
-            x (int): The movement along the x-axis.
-            y (int): The movement along the y-axis.
+            x (float): The movement along the x-axis.
+            y (float): The movement along the y-axis.
         """
-        self.serial_port.write(f'M{x},{y}\n'.encode())
+        # Add the remainder from the previous calculation
+        x += self.remainder_x
+        y += self.remainder_y
+
+        # Round x and y, and calculate the new remainder
+        move_x = int(x)
+        move_y = int(y)
+        self.remainder_x = x - move_x
+        self.remainder_y = y - move_y
+
+        if move_x != 0 or move_y != 0:
+            with self.lock:
+                self.serial_port.write(f'M{move_x},{move_y}\n'.encode())
 
     def click(self):
         """
         Sends a mouse click command to the Arduino.
         """
-        self.serial_port.write('C\n'.encode())
+        with self.lock: 
+            self.serial_port.write('C\n'.encode())
