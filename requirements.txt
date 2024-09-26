@@ -1,3 +1,4 @@
+requests
 pywin32
 opencv-python
 serial-tool 
