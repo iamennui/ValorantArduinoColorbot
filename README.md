@@ -1,5 +1,3 @@
-[![Discord](https://discordapp.com/api/guilds/1235469363050577950/widget.png?style=shield)](https://discord.gg/zxkuUC2zeR)
-
 ## DISCLAIMER
 
 - **Cheat Detection**: This project was not aimed to be undetected and will never aim to do so.
