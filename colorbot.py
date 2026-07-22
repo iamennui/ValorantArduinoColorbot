@@ -61,7 +61,7 @@ class Colorbot:
         while True:
             if win32api.GetAsyncKeyState(self.aim_key) < 0:
                 self.process("move")
-            time.sleep(0.01)  # Small sleep to prevent high CPU usage
+            time.sleep(0.008)  # Small sleep to prevent high CPU usage
 
     def listen_triggerbot(self):
         """
